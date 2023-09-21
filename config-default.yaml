@@ -1,0 +1,46 @@
+# delelopment
+system:
+  # 设定模式(debug/release/test,正式版改为release)
+  mode: debug
+  host: 0.0.0.0
+  # 程序监听端口
+  port: 10001
+
+logs:
+  # 日志等级(-1:Debug, 0:Info, 1:Warn, 2:Error, 3:DPanic, 4:Panic, 5:Fatal, -1<=level<=5, 参照zap.level源码)
+  level: -1
+  # 日志路径
+  path: logs
+  # 文件最大大小, M
+  max-size: 50
+  # 备份数
+  max-backups: 100
+  # 存放时间, 天
+  max-age: 30
+  # 是否压缩
+  compress: false
+
+# 令牌桶限流配置
+rate-limit:
+  # 填充一个令牌需要的时间间隔,毫秒
+  fill-interval: 50
+  # 桶容量
+  capacity: 200
+
+encode:
+  aes-key: zaRYZdWRLXVPWZaudUsx8ezBTcZb72gV
+  aes-iv: 8BaT3teLB4NuzaZM
+
+xun-fei:
+  host-url-v1: wss://spark-api.xf-yun.com/v1.1/chat
+  host-url-v2: wss://spark-api.xf-yun.com/v2.1/chat
+  appid: b8457d15
+  secret: Y2JhY2ViMThmODYwMDEwNWU3YjI4Mzk4
+  key: 6adc86d515b689ec4da3fa5c06aeb2bf
+
+xun-fei-spark:
+  host-url-spark: wss://spark-openapi.cn-huabei-1.xf-yun.com/v1/assistants/
+  assistants: npb9wnw5fgdu_v1
+  appid: d4d6a5ca
+  secret: MjA0ZWJjNmM2NDk4YWVlMmUyMDcwZDc4
+  key: 0d5c0c0632bce785f4ea10289b50f8e9
